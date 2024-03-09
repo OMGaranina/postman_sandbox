@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "258b69d3-be1b-4859-8112-3623ef2bfb78",
+		"name": "Vehicle Status",
+		"description": "API to perform critical status checks on connected vehicles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "32715645-258b69d3-be1b-4859-8112-3623ef2bfb78"
+	},
+	"item": [
+		{
+			"name": "vehicles",
+			"item": [
+				{
+					"name": "{vin}",
+					"item": [
+						{
+							"name": "status",
+							"item": [
+								{
+									"name": "odometer",
+									"item": [
+										{
+											"name": "Returns the current odometer reading in both km and miles",
+											"id": "2ace07a8-3555-41c0-9016-b4c85e8d1172",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/vehicles/:vin/status/odometer",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"vehicles",
+														":vin",
+														"status",
+														"odometer"
+													],
+													"variable": [
+														{
+															"id": "bb17675d-54fe-49f1-bfa1-b6c94b68edb2",
+															"key": "vin",
+															"value": "<string>",
+															"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "943319cf-f4d4-4ef5-8a79-229673470ec4",
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/vehicles/:vin/status/odometer",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"vehicles",
+																":vin",
+																"status",
+																"odometer"
+															],
+															"variable": [
+																{
+																	"id": "bb17675d-54fe-49f1-bfa1-b6c94b68edb2",
+																	"key": "vin",
+																	"value": "<string>",
+																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"km\": \"<number>\",\n  \"miles\": \"<number>\"\n}"
+												},
+												{
+													"id": "98b45aba-2207-4b2d-a407-6ab333a092d4",
+													"name": "Unexpected error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/vehicles/:vin/status/odometer",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"vehicles",
+																":vin",
+																"status",
+																"odometer"
+															],
+															"variable": [
+																{
+																	"id": "bb17675d-54fe-49f1-bfa1-b6c94b68edb2",
+																	"key": "vin",
+																	"value": "<string>",
+																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": "<string>"
+												}
+											]
+										}
+									],
+									"id": "8130b481-63d5-4260-8438-da14ff618ebb"
+								},
+								{
+									"name": "battery",
+									"item": [
+										{
+											"name": "Returns a status and health report for all connected battery elements (includes EV batteries as well)",
+											"id": "b64025c4-09e5-4d50-98ec-e0ed7f25c50a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/vehicles/:vin/status/battery",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"vehicles",
+														":vin",
+														"status",
+														"battery"
+													],
+													"variable": [
+														{
+															"id": "ebe2bf9a-d844-44c0-ab7f-e600f5127088",
+															"key": "vin",
+															"value": "<string>",
+															"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "a38f763f-37c1-4bea-9b91-e108e65cf542",
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/vehicles/:vin/status/battery",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"vehicles",
+																":vin",
+																"status",
+																"battery"
+															],
+															"variable": [
+																{
+																	"id": "ebe2bf9a-d844-44c0-ab7f-e600f5127088",
+																	"key": "vin",
+																	"value": "<string>",
+																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"cca\": \"<number>\",\n  \"charging\": \"<boolean>\",\n  \"health\": \"<string>\",\n  \"install\": \"<string>\",\n  \"overvolt\": \"<boolean>\",\n  \"type\": \"<string>\",\n  \"voltage\": \"<number>\"\n}"
+												},
+												{
+													"id": "d899af3c-7262-4355-9d8d-1f00fcc01014",
+													"name": "Unexpected error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/vehicles/:vin/status/battery",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"vehicles",
+																":vin",
+																"status",
+																"battery"
+															],
+															"variable": [
+																{
+																	"id": "ebe2bf9a-d844-44c0-ab7f-e600f5127088",
+																	"key": "vin",
+																	"value": "<string>",
+																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": "<string>"
+												}
+											]
+										}
+									],
+									"id": "57d1c4d0-7831-48fa-add7-41c00dc1a8b6"
+								},
+								{
+									"name": "engine",
+									"item": [
+										{
+											"name": "Returns a complete status and health update for the engine",
+											"id": "24614164-de7e-493e-8569-e3e8766c4c6b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/vehicles/:vin/status/engine",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"vehicles",
+														":vin",
+														"status",
+														"engine"
+													],
+													"variable": [
+														{
+															"id": "3acaa4ad-5558-42ce-9cbd-f81be9e3c887",
+															"key": "vin",
+															"value": "<string>",
+															"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+														}
+													]
+												},
+												"description": "As status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows."
+											},
+											"response": [
+												{
+													"id": "68d6d0a8-4aca-4b95-90b7-131f67145c25",
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/vehicles/:vin/status/engine",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"vehicles",
+																":vin",
+																"status",
+																"engine"
+															],
+															"variable": [
+																{
+																	"id": "3acaa4ad-5558-42ce-9cbd-f81be9e3c887",
+																	"key": "vin",
+																	"value": "<string>",
+																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+																}
+															]
+														},
+														"description": "As status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows."
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"coolantTemp\": \"<number>\",\n  \"oilPressure\": \"<number>\",\n  \"oilTemp\": \"<number>\",\n  \"rpm\": \"<number>\",\n  \"running\": \"<boolean>\"\n}"
+												},
+												{
+													"id": "0f8ee72f-b7aa-4ad4-a341-7aab42029d47",
+													"name": "Unexpected error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/vehicles/:vin/status/engine",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"vehicles",
+																":vin",
+																"status",
+																"engine"
+															],
+															"variable": [
+																{
+																	"id": "3acaa4ad-5558-42ce-9cbd-f81be9e3c887",
+																	"key": "vin",
+																	"value": "<string>",
+																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
+																}
+															]
+														},
+														"description": "As status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows."
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": "<string>"
+												}
+											]
+										}
+									],
+									"id": "5041c279-8f67-48c2-941f-1ceee5b8d791"
+								}
+							],
+							"id": "17f5e71d-b82c-4b08-a640-187f90777543"
+						}
+					],
+					"id": "8f381e6f-3cb4-438b-b67a-e0c48e1b6fae"
+				}
+			],
+			"id": "54514983-db13-4911-8f8f-012e5a95d02a"
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "bc9dea4d-8808-4a8a-a416-3419615ad268",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
