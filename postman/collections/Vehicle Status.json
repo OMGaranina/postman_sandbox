@@ -21,6 +21,21 @@
 									"item": [
 										{
 											"name": "Returns the current odometer reading in both km and miles",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "6fd4aef1-f3d1-4969-a4eb-abb058d516af",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
 											"id": "2ace07a8-3555-41c0-9016-b4c85e8d1172",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -46,9 +61,8 @@
 													],
 													"variable": [
 														{
-															"id": "bb17675d-54fe-49f1-bfa1-b6c94b68edb2",
 															"key": "vin",
-															"value": "<string>",
+															"value": "4Y1SL65848Z411439",
 															"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
 														}
 													]
@@ -79,7 +93,6 @@
 															],
 															"variable": [
 																{
-																	"id": "bb17675d-54fe-49f1-bfa1-b6c94b68edb2",
 																	"key": "vin",
 																	"value": "<string>",
 																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
@@ -123,7 +136,6 @@
 															],
 															"variable": [
 																{
-																	"id": "bb17675d-54fe-49f1-bfa1-b6c94b68edb2",
 																	"key": "vin",
 																	"value": "<string>",
 																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
@@ -178,7 +190,6 @@
 													],
 													"variable": [
 														{
-															"id": "ebe2bf9a-d844-44c0-ab7f-e600f5127088",
 															"key": "vin",
 															"value": "<string>",
 															"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
@@ -211,7 +222,6 @@
 															],
 															"variable": [
 																{
-																	"id": "ebe2bf9a-d844-44c0-ab7f-e600f5127088",
 																	"key": "vin",
 																	"value": "<string>",
 																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
@@ -255,7 +265,6 @@
 															],
 															"variable": [
 																{
-																	"id": "ebe2bf9a-d844-44c0-ab7f-e600f5127088",
 																	"key": "vin",
 																	"value": "<string>",
 																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
@@ -310,7 +319,6 @@
 													],
 													"variable": [
 														{
-															"id": "3acaa4ad-5558-42ce-9cbd-f81be9e3c887",
 															"key": "vin",
 															"value": "<string>",
 															"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
@@ -344,7 +352,6 @@
 															],
 															"variable": [
 																{
-																	"id": "3acaa4ad-5558-42ce-9cbd-f81be9e3c887",
 																	"key": "vin",
 																	"value": "<string>",
 																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
@@ -389,7 +396,6 @@
 															],
 															"variable": [
 																{
-																	"id": "3acaa4ad-5558-42ce-9cbd-f81be9e3c887",
 																	"key": "vin",
 																	"value": "<string>",
 																	"description": "(Required) Required 17-character VIN (Vehicle Identification Number)"
